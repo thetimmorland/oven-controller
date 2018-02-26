@@ -1,0 +1,622 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:oven-controller-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Oven Controller"
+Date ""
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA16U2-AU U1
+U 1 1 5A753368
+P 4700 3450
+F 0 "U1" H 3850 4800 50  0000 C CNN
+F 1 "ATMEGA16U2" H 5450 2100 50  0000 C CNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 4550 3500 50  0001 C CNN
+F 3 "http://www.atmel.com/Images/doc7799.pdf" H 4800 2000 50  0001 C CNN
+	1    4700 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB_OTG J1
+U 1 1 5A75364E
+P 2000 3850
+F 0 "J1" H 1800 4300 50  0000 L CNN
+F 1 "USB" H 1800 4200 50  0000 L CNN
+F 2 "Connectors_USB:USB_Micro-B_Molex_47346-0001" H 2150 3800 50  0001 C CNN
+F 3 "" H 2150 3800 50  0001 C CNN
+	1    2000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A7541CA
+P 2650 3800
+F 0 "R1" V 2730 3800 50  0000 C CNN
+F 1 "22" V 2650 3800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 2580 3800 50  0001 C CNN
+F 3 "" H 2650 3800 50  0001 C CNN
+	1    2650 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5A75422F
+P 2650 4000
+F 0 "R2" V 2730 4000 50  0000 C CNN
+F 1 "22" V 2650 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 2580 4000 50  0001 C CNN
+F 3 "" H 2650 4000 50  0001 C CNN
+	1    2650 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Crystal Y1
+U 1 1 5A758BFC
+P 2750 2900
+F 0 "Y1" H 2750 3050 50  0000 C CNN
+F 1 "16MHz" H 2750 2750 50  0000 C CNN
+F 2 "Crystals:Crystal_HC52-U_Vertical" H 2750 2900 50  0001 C CNN
+F 3 "" H 2750 2900 50  0001 C CNN
+	1    2750 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L C C1
+U 1 1 5A759B8E
+P 2350 2750
+F 0 "C1" H 2375 2850 50  0000 L CNN
+F 1 "22pF" H 2375 2650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 2388 2600 50  0001 C CNN
+F 3 "" H 2350 2750 50  0001 C CNN
+	1    2350 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5A75BDBD
+P 4700 4950
+F 0 "#PWR01" H 4700 4700 50  0001 C CNN
+F 1 "GND" H 4700 4800 50  0000 C CNN
+F 2 "" H 4700 4950 50  0001 C CNN
+F 3 "" H 4700 4950 50  0001 C CNN
+	1    4700 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_02x03_Odd_Even J2
+U 1 1 5A75DF19
+P 2450 5250
+F 0 "J2" H 2500 5450 50  0000 C CNN
+F 1 "ISP" H 2500 5050 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x03_Pitch2.54mm" H 2450 5250 50  0001 C CNN
+F 3 "" H 2450 5250 50  0001 C CNN
+	1    2450 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5A75E981
+P 2800 5400
+F 0 "#PWR02" H 2800 5150 50  0001 C CNN
+F 1 "GND" H 2800 5250 50  0000 C CNN
+F 2 "" H 2800 5400 50  0001 C CNN
+F 3 "" H 2800 5400 50  0001 C CNN
+	1    2800 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L VBUS #PWR03
+U 1 1 5A75EE81
+P 2800 5100
+F 0 "#PWR03" H 2800 4950 50  0001 C CNN
+F 1 "VBUS" H 2800 5250 50  0000 C CNN
+F 2 "" H 2800 5100 50  0001 C CNN
+F 3 "" H 2800 5100 50  0001 C CNN
+	1    2800 5100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5800 2850
+NoConn ~ 5800 2950
+NoConn ~ 5800 3350
+NoConn ~ 5800 3450
+NoConn ~ 5800 3550
+NoConn ~ 5800 3650
+NoConn ~ 5800 3750
+NoConn ~ 5800 3850
+NoConn ~ 5800 3950
+NoConn ~ 5800 4150
+NoConn ~ 5800 4250
+NoConn ~ 5800 4350
+NoConn ~ 5800 4450
+NoConn ~ 5800 4550
+$Comp
+L MAX31855KASA U2
+U 1 1 5A769A68
+P 4700 6250
+F 0 "U2" H 4400 6600 50  0000 L CNN
+F 1 "MAX31855KASA" H 4750 6600 50  0000 L CNN
+F 2 "oven-controller:MAX-90-0096" H 5700 5900 50  0001 C CIN
+F 3 "" H 4700 6250 50  0001 C CNN
+	1    4700 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5A76AFD2
+P 4700 6750
+F 0 "#PWR04" H 4700 6500 50  0001 C CNN
+F 1 "GND" H 4700 6600 50  0000 C CNN
+F 2 "" H 4700 6750 50  0001 C CNN
+F 3 "" H 4700 6750 50  0001 C CNN
+	1    4700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 5A76B0A3
+P 4400 6700
+F 0 "C4" H 4425 6800 50  0000 L CNN
+F 1 "0.1uF" H 4425 6600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4438 6550 50  0001 C CNN
+F 3 "" H 4400 6700 50  0001 C CNN
+	1    4400 6700
+	0    -1   1    0   
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J3
+U 1 1 5A76C42B
+P 3900 6200
+F 0 "J3" H 3900 6300 50  0000 C CNN
+F 1 "Thermocouple" H 3900 6000 50  0000 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 3900 6200 50  0001 C CNN
+F 3 "" H 3900 6200 50  0001 C CNN
+	1    3900 6200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5A77375F
+P 2000 4300
+F 0 "#PWR05" H 2000 4050 50  0001 C CNN
+F 1 "GND" H 2000 4150 50  0000 C CNN
+F 2 "" H 2000 4300 50  0001 C CNN
+F 3 "" H 2000 4300 50  0001 C CNN
+	1    2000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L VBUS #PWR06
+U 1 1 5A773FB4
+P 2450 3650
+F 0 "#PWR06" H 2450 3500 50  0001 C CNN
+F 1 "VBUS" H 2450 3800 50  0000 C CNN
+F 2 "" H 2450 3650 50  0001 C CNN
+F 3 "" H 2450 3650 50  0001 C CNN
+	1    2450 3650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2300 4050
+NoConn ~ 1900 4250
+$Comp
+L C C3
+U 1 1 5A774A82
+P 3150 1750
+F 0 "C3" H 3175 1850 50  0000 L CNN
+F 1 "1uF" H 3175 1650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3188 1600 50  0001 C CNN
+F 3 "" H 3150 1750 50  0001 C CNN
+	1    3150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5A774BAD
+P 3150 1550
+F 0 "#PWR07" H 3150 1300 50  0001 C CNN
+F 1 "GND" H 3150 1400 50  0000 C CNN
+F 2 "" H 3150 1550 50  0001 C CNN
+F 3 "" H 3150 1550 50  0001 C CNN
+	1    3150 1550
+	-1   0    0    1   
+$EndComp
+Text Notes 3650 1750 0    60   ~ 0
+For Internal 3.3V Regulator\nMCU Datasheet Figure 20-4
+$Comp
+L GND #PWR08
+U 1 1 5A78928E
+P 2150 3050
+F 0 "#PWR08" H 2150 2800 50  0001 C CNN
+F 1 "GND" H 2150 2900 50  0000 C CNN
+F 2 "" H 2150 3050 50  0001 C CNN
+F 3 "" H 2150 3050 50  0001 C CNN
+	1    2150 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L C C2
+U 1 1 5A759B3D
+P 2350 3050
+F 0 "C2" H 2375 3150 50  0000 L CNN
+F 1 "22pF" H 2375 2950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 2388 2900 50  0001 C CNN
+F 3 "" H 2350 3050 50  0001 C CNN
+	1    2350 3050
+	0    1    1    0   
+$EndComp
+Text Notes 2150 2600 0    60   ~ 0
+C Values From\nMCU Datasheet
+Text Notes 2350 4350 0    60   ~ 0
+R Values From\nMCU Datasheet
+Wire Wire Line
+	2500 3050 3600 3050
+Wire Wire Line
+	3600 2950 3000 2950
+Wire Wire Line
+	3000 2750 3000 2950
+Wire Wire Line
+	2500 2750 3000 2750
+Connection ~ 2750 2750
+Connection ~ 2750 3050
+Wire Wire Line
+	2000 5150 2250 5150
+Wire Wire Line
+	2000 5250 2250 5250
+Wire Wire Line
+	2750 5350 2800 5350
+Wire Wire Line
+	2800 5350 2800 5400
+Wire Wire Line
+	4700 4850 4700 4950
+Wire Wire Line
+	5800 2450 6050 2450
+Wire Wire Line
+	5800 2550 6050 2550
+Wire Wire Line
+	5800 2650 6050 2650
+Wire Wire Line
+	3350 2750 3600 2750
+Wire Wire Line
+	5100 6050 5350 6050
+Wire Wire Line
+	5100 6350 5350 6350
+Wire Wire Line
+	5100 6150 5350 6150
+Wire Wire Line
+	4700 6650 4700 6750
+Wire Wire Line
+	4700 6700 4550 6700
+Connection ~ 4700 6700
+Wire Wire Line
+	4300 6150 4250 6150
+Wire Wire Line
+	4250 6150 4250 6200
+Wire Wire Line
+	4250 6200 4100 6200
+Wire Wire Line
+	4300 6350 4250 6350
+Wire Wire Line
+	4250 6350 4250 6300
+Wire Wire Line
+	4250 6300 4100 6300
+Wire Wire Line
+	2800 3800 2850 3800
+Wire Wire Line
+	2850 3800 2850 3850
+Wire Wire Line
+	2850 3850 3600 3850
+Wire Wire Line
+	2800 4000 2850 4000
+Wire Wire Line
+	2850 4000 2850 3950
+Wire Wire Line
+	2850 3950 3600 3950
+Wire Wire Line
+	2450 3800 2500 3800
+Wire Wire Line
+	2450 4000 2500 4000
+Wire Wire Line
+	3000 3650 3000 3750
+Wire Wire Line
+	3000 3750 3600 3750
+Wire Wire Line
+	2000 4250 2000 4300
+Wire Wire Line
+	2300 3850 2450 3850
+Wire Wire Line
+	2300 3950 2450 3950
+Wire Wire Line
+	2300 3650 3000 3650
+Wire Wire Line
+	2450 3650 2450 3650
+Wire Wire Line
+	4700 2050 4700 1950
+Wire Wire Line
+	4700 1950 3150 1950
+Wire Wire Line
+	3150 1900 3150 3650
+Wire Wire Line
+	3150 2850 3600 2850
+Wire Wire Line
+	3150 3650 3600 3650
+Connection ~ 3150 2850
+Wire Wire Line
+	3150 1550 3150 1600
+Connection ~ 3150 1950
+Wire Wire Line
+	4700 4900 3550 4900
+Wire Wire Line
+	3550 4900 3550 4050
+Wire Wire Line
+	3550 4050 3600 4050
+Connection ~ 4700 4900
+Wire Wire Line
+	2450 3850 2450 3800
+Wire Wire Line
+	2450 3950 2450 4000
+Wire Wire Line
+	2200 2750 2150 2750
+Wire Wire Line
+	2150 3050 2200 3050
+Connection ~ 2150 3050
+Wire Wire Line
+	2150 2750 2150 3050
+Text Label 2000 5150 0    60   ~ 0
+MISO
+Text Label 2000 5250 0    60   ~ 0
+SCK
+Wire Wire Line
+	5800 2350 6050 2350
+$Comp
+L R R3
+U 1 1 5A7A9689
+P 6550 3050
+F 0 "R3" V 6630 3050 50  0000 C CNN
+F 1 "100" V 6550 3050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 6480 3050 50  0001 C CNN
+F 3 "" H 6550 3050 50  0001 C CNN
+	1    6550 3050
+	0    1    1    0   
+$EndComp
+Text Notes 6200 2950 0    39   ~ 0
+3.3V -1.5V / 50 mA\n= 100 ohms\n3.3V * 50mA = 0.165W
+Wire Wire Line
+	5800 3050 6400 3050
+Wire Wire Line
+	5800 2750 6050 2750
+Text Label 3350 2750 0    60   ~ 0
+Reset
+Connection ~ 2450 3650
+Wire Wire Line
+	6700 3050 7100 3050
+Wire Wire Line
+	2750 5150 2800 5150
+Wire Wire Line
+	2800 5150 2800 5100
+Wire Wire Line
+	2250 5350 2000 5350
+Text Label 2000 5350 0    60   ~ 0
+Reset
+Wire Wire Line
+	2750 5250 3000 5250
+Text Label 3000 5250 2    60   ~ 0
+MOSI
+Wire Wire Line
+	4250 6700 4000 6700
+Text Label 4000 6700 0    60   ~ 0
+3.3V
+Text Label 6050 2350 2    60   ~ 0
+SS
+Text Label 6050 2450 2    60   ~ 0
+SCK
+Text Label 6050 2550 2    60   ~ 0
+MOSI
+Text Label 6050 2650 2    60   ~ 0
+MISO
+Text Label 6050 2750 2    60   ~ 0
+3.3V
+Wire Wire Line
+	4700 5850 4700 5600
+Text Label 4700 5600 3    60   ~ 0
+3.3V
+Text Label 5350 6050 2    60   ~ 0
+SCK
+Text Label 5350 6150 2    60   ~ 0
+MISO
+Text Label 5350 6350 2    60   ~ 0
+SS
+$Comp
+L LTV-354T U4
+U 1 1 5A8B4C9C
+P 7700 4200
+F 0 "U4" H 7490 4390 50  0000 L CNN
+F 1 "LTV-354T" H 7700 4400 50  0000 L CNN
+F 2 "oven-controller:LTV-354T" H 7500 4000 50  0001 L CIN
+F 3 "" H 7725 4200 50  0001 L CNN
+	1    7700 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MOC3022M U3
+U 1 1 5A8B4CA3
+P 7400 3150
+F 0 "U3" H 7190 3340 50  0000 L CNN
+F 1 "MOC3022S" H 7400 3350 50  0000 L CNN
+F 2 "oven-controller:MOC302X" H 7200 2950 50  0001 L CIN
+F 3 "" H 7375 3150 50  0001 L CNN
+	1    7400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5A8B4CAA
+P 8250 4100
+F 0 "R5" V 8330 4100 50  0000 C CNN
+F 1 "10k" V 8250 4100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0614_L14.3mm_D5.7mm_P15.24mm_Horizontal" V 8180 4100 50  0001 C CNN
+F 3 "" H 8250 4100 50  0001 C CNN
+	1    8250 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 5A8B4CB1
+P 7350 4350
+F 0 "#PWR09" H 7350 4100 50  0001 C CNN
+F 1 "GND" H 7350 4200 50  0000 C CNN
+F 2 "" H 7350 4350 50  0001 C CNN
+F 3 "" H 7350 4350 50  0001 C CNN
+	1    7350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 5A8B4CB7
+P 7050 3300
+F 0 "#PWR010" H 7050 3050 50  0001 C CNN
+F 1 "GND" H 7050 3150 50  0000 C CNN
+F 2 "" H 7050 3300 50  0001 C CNN
+F 3 "" H 7050 3300 50  0001 C CNN
+	1    7050 3300
+	1    0    0    -1  
+$EndComp
+Text Notes 7950 3950 0    39   ~ 0
+120V - 1.2V / 10 mA\n= 10k ohms\n\n120V * 10mA = 1.2W
+$Comp
+L Q_TRIAC_AGA D1
+U 1 1 5A8B4CC0
+P 8350 3250
+F 0 "D1" H 8475 3275 50  0000 L CNN
+F 1 "Q6025LH5TP" H 8475 3200 50  0000 L CNN
+F 2 "oven-controller:TO-220-3_Vertical_Heatsink" V 8425 3275 50  0001 C CNN
+F 3 "" V 8350 3250 50  0001 C CNN
+	1    8350 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4100 8100 4100
+Wire Wire Line
+	7100 3250 7050 3250
+Wire Wire Line
+	7050 3250 7050 3300
+Wire Wire Line
+	7350 4350 7350 4300
+Wire Wire Line
+	7350 4300 7400 4300
+$Comp
+L R R4
+U 1 1 5A8B4CCC
+P 8000 3050
+F 0 "R4" V 8080 3050 50  0000 C CNN
+F 1 "220" V 8000 3050 50  0000 C CNN
+F 2 "Resistors_SMD:R_2512_HandSoldering" V 7930 3050 50  0001 C CNN
+F 3 "" H 8000 3050 50  0001 C CNN
+	1    8000 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 3050 7850 3050
+Wire Wire Line
+	8150 3050 8650 3050
+Wire Wire Line
+	8350 3050 8350 3100
+Wire Wire Line
+	8350 3450 8650 3450
+Wire Wire Line
+	8350 3450 8350 3400
+Connection ~ 8350 3050
+Text Label 8650 3050 2    60   ~ 0
+Load
+Text Label 8650 3450 2    60   ~ 0
+Neut
+Wire Wire Line
+	8400 4100 8650 4100
+Text Label 8650 4100 2    60   ~ 0
+Load
+Wire Wire Line
+	8000 4300 8650 4300
+Text Label 8650 4300 2    60   ~ 0
+Neut
+Wire Wire Line
+	9400 3900 9150 3900
+Wire Wire Line
+	9400 3450 9150 3450
+Text Label 9150 3450 0    60   ~ 0
+Neut
+Text Label 9150 3900 0    60   ~ 0
+Load
+Text Notes 7900 2900 0    39   ~ 0
+120V * sqrt(2) / 1A\n= 220 ohms\n\n120V * sqrt(2) * 1A\n= 120W * sqrt(2)\n\n120W * sqrt(2) * 4us / (1/120)s\n= 8.15E-2
+Wire Wire Line
+	7700 3250 8200 3250
+Wire Wire Line
+	8200 3250 8200 3350
+$Comp
+L Conn_01x01_Female J5
+U 1 1 5A8B4CE6
+P 9600 3450
+F 0 "J5" H 9600 3550 50  0000 C CNN
+F 1 "Neut In" H 9600 3350 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_2mmDrill" H 9600 3450 50  0001 C CNN
+F 3 "" H 9600 3450 50  0001 C CNN
+	1    9600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01_Female J4
+U 1 1 5A8B4CED
+P 9600 3900
+F 0 "J4" H 9600 4000 50  0000 C CNN
+F 1 "Load In" H 9600 3800 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_2mmDrill" H 9600 3900 50  0001 C CNN
+F 3 "" H 9600 3900 50  0001 C CNN
+	1    9600 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4100 6500 4100
+Wire Wire Line
+	6500 4100 6500 3250
+Wire Wire Line
+	6500 3250 5800 3250
+$EndSCHEMATC
